@@ -56,6 +56,9 @@ public class SwipeScript : MonoBehaviour
             }
             else if (Input.GetMouseButtonUp(0))
             {
+            
+            if (Mathf.Sqrt(Mathf.Pow(Input.mousePosition.x - startPos.x, 2) + Mathf.Pow(Input.mousePosition.y - startPos.y, 2)) > 75f)
+            {
                 touchTimeFinish = Time.time;
 
                 //Считаем интервал свайпа
@@ -70,6 +73,8 @@ public class SwipeScript : MonoBehaviour
                 //Задаем импульс для персонажа.
                 player.AddForce(-direction / TimeInterval * throwForce);
                 player.AddTorque(rotation);
+            }
+
             }
         
         #endregion

@@ -1,6 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - EnemyHealth
+    - Shoot
     - SwipeScript
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -17,7 +19,6 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.AspectRatioFitter
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -39,6 +40,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 62
@@ -52,15 +55,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11494}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 12036}
     - Class: 114
-      Script: {instanceID: 12034}
+      Script: {instanceID: 12430}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 12442}
     - Class: 114
-      Script: {instanceID: 13750}
+      Script: {instanceID: 13250}
     - Class: 114
-      Script: {instanceID: 14754}
+      Script: {instanceID: 13278}
+    - Class: 114
+      Script: {instanceID: 13756}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -380,6 +385,18 @@ ScriptsOnlyBuild:
     className: AnalyticsEventTrackerEditor
   - hash:
       serializedVersion: 2
+      Hash: 98c44e9455dc4794c1e36202d16fe01f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SwipeScript
+  - hash:
+      serializedVersion: 2
+      Hash: 0d3c0c534a4b1dcf12b6857203cd7e14
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shoot
+  - hash:
+      serializedVersion: 2
       Hash: 21e871d89bbce53c038fc75ad1b7c7f3
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
@@ -530,6 +547,12 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 0f559c19b6321540d59ff0bb04ee3c3b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyHealth
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -678,12 +701,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 98c44e9455dc4794c1e36202d16fe01f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SwipeScript
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
