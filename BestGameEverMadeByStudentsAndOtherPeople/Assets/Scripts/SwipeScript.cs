@@ -28,22 +28,25 @@ public class SwipeScript : MonoBehaviour
              //При конце свайпа
              if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
              {
-                 //Фиксируем конечное время
-                 touchTimeFinish = Time.time;
+            if (Mathf.Sqrt(Mathf.Pow(Input.GetTouch(0).position.x - startPos.x, 2) + Mathf.Pow(Input.GetTouch(0).position.y - startPos.y, 2)) < 75f)
+            {
+                        //Фиксируем конечное время
+                         touchTimeFinish = Time.time;
 
-                 //Считаем интервал свайпа
-                 TimeInterval = touchTimeFinish - touchTimeStart;
+                        //Считаем интервал свайпа
+                        TimeInterval = touchTimeFinish - touchTimeStart;
 
-                 //Сохраняем итоговую позицию
-                 endPos = Input.GetTouch(0).position;
+                        //Сохраняем итоговую позицию
+                        endPos = Input.GetTouch(0).position;
 
-                 //Считаем направление свайпа
-                 direction = startPos - endPos;
+                        //Считаем направление свайпа
+                        direction = startPos - endPos;
 
-                 //Задаем импульс для персонажа.
-                 player.AddForce(-direction / TimeInterval * throwForce);
-                 player.AddTorque(rotation);
-        }
+                        //Задаем импульс для персонажа.
+                        player.AddForce(-direction / TimeInterval * throwForce);
+                        player.AddTorque(rotation);
+                 }
+             }
          
          #endregion
          

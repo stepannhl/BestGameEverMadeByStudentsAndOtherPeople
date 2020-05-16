@@ -10,8 +10,8 @@ public class Shoot : MonoBehaviour
     public GameObject player;
     public GameObject bulletPrefab;
     public float bulletSpeed = 50f;
+    public GameObject enemyPrefab;
 
-    bool check = false;
 
     public float coolDown;
     private float coolDownTimer = 0;
@@ -19,6 +19,12 @@ public class Shoot : MonoBehaviour
 
     private void Update()
     {
+        //Создания врага для проверок
+        if (Input.GetMouseButtonDown(1))
+        {
+            Instantiate(enemyPrefab).transform.position = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0.5f)); ;
+        }
+
         #region PC
 
 
@@ -47,22 +53,31 @@ public class Shoot : MonoBehaviour
         #endregion
 
         #region Android
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, transform.position.z));
-            Vector3 differenceAndroid = target - player.transform.position;
-            float rotationZAndroid = Mathf.Atan2(differenceAndroid.y, differenceAndroid.x) * Mathf.Rad2Deg;
-            float distance = differenceAndroid.magnitude;
-            Vector2 direction = differenceAndroid / distance;
-            direction.Normalize();
+            startPos = Input.GetTouch(0).position;
+        }
+        else if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        {
+            if (Mathf.Sqrt(Mathf.Pow(Input.GetTouch(0).position.x - startPos.x, 2) + Mathf.Pow(Input.GetTouch(0).position.y - startPos.y, 2)) < 75f)
+            {
 
-           
-            if(Time.time>coolDownTimer)
-                fireBullet(direction, rotationZAndroid);
+                target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, transform.position.z));
+                Vector3 differenceAndroid = target - player.transform.position;
+                float rotationZAndroid = Mathf.Atan2(differenceAndroid.y, differenceAndroid.x) * Mathf.Rad2Deg;
+                float distance = differenceAndroid.magnitude;
+                Vector2 direction = differenceAndroid / distance;
+                direction.Normalize();
 
+
+                if (Time.time > coolDownTimer)
+                    fireBullet(direction, rotationZAndroid);
+            }
         }
         #endregion
     }
+
 
     void fireBullet(Vector2 direction, float rotationZ)
     {

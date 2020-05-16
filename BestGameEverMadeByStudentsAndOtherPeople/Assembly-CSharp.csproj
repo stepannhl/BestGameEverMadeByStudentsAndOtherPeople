@@ -62,9 +62,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AnimationMenu.cs" />
+    <Compile Include="Assets\Scripts\Buttons.cs" />
     <Compile Include="Assets\Scripts\ColliderCheck.cs" />
+    <Compile Include="Assets\Scripts\DownAnum.cs" />
     <Compile Include="Assets\Scripts\HealthScript.cs" />
     <Compile Include="Assets\Scripts\Main.cs" />
+    <Compile Include="Assets\Scripts\PauseMenuButton.cs" />
+    <Compile Include="Assets\Scripts\QuitButton.cs" />
+    <Compile Include="Assets\Scripts\QuitScript.cs" />
     <Compile Include="Assets\Scripts\Shoot.cs" />
     <Compile Include="Assets\Scripts\SwipeScript.cs" />
     <Reference Include="UnityEngine">
