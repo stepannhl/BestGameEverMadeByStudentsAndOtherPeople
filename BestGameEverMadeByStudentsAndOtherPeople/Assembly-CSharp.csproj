@@ -62,17 +62,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AnimationMenu.cs" />
-    <Compile Include="Assets\Scripts\Buttons.cs" />
-    <Compile Include="Assets\Scripts\ColliderCheck.cs" />
-    <Compile Include="Assets\Scripts\DownAnum.cs" />
-    <Compile Include="Assets\Scripts\HealthScript.cs" />
-    <Compile Include="Assets\Scripts\Main.cs" />
-    <Compile Include="Assets\Scripts\PauseMenuButton.cs" />
-    <Compile Include="Assets\Scripts\QuitButton.cs" />
-    <Compile Include="Assets\Scripts\QuitScript.cs" />
-    <Compile Include="Assets\Scripts\Shoot.cs" />
-    <Compile Include="Assets\Scripts\SwipeScript.cs" />
+    <Compile Include="Assets\Light.cs" />
+    <Compile Include="Assets\Scripts\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\HealthScript\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\HealthScript\HealthScript.cs" />
+    <Compile Include="Assets\Scripts\HealthScript\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Logica\ColliderCheck.cs" />
+    <Compile Include="Assets\Scripts\Logica\LogicEnemy.cs" />
+    <Compile Include="Assets\Scripts\Logica\Shoot.cs" />
+    <Compile Include="Assets\Scripts\Logica\SwipeScript.cs" />
+    <Compile Include="Assets\Scripts\Menu and Quit Script\AnimationMenu.cs" />
+    <Compile Include="Assets\Scripts\Menu and Quit Script\Buttons.cs" />
+    <Compile Include="Assets\Scripts\Menu and Quit Script\DownAnum.cs" />
+    <Compile Include="Assets\Scripts\Menu and Quit Script\PauseMenuButton.cs" />
+    <Compile Include="Assets\Scripts\Menu and Quit Script\QuitButton.cs" />
+    <Compile Include="Assets\Scripts\Menu and Quit Script\QuitScript.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

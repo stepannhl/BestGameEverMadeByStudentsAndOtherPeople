@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7320388550368766819}
-  bulletDamage: 1
+  bulletDamage: 10
