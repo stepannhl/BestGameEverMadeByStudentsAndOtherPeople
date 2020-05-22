@@ -726,6 +726,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -739,10 +740,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 75c8d044-f6f8-4b20-a881-50238f2884a8
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: BestGameEverMadeByStudentsAndOtherPeople
+  organizationId: stepannhl
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
